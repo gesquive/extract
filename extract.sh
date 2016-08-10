@@ -39,9 +39,8 @@ function exe() {
 
 for x in "$@"; do
     if [ -f "$x" ] ; then
-        # NAME=${1%.*}
-        # mkdir $NAME && cd $NAME
-        case "$1" in
+        NAME="$(echo "$1" | tr '[:upper:]' '[:lower:]')"
+        case "$NAME" in
             *.tar.bz2 )
                 if ! check "tar"; then
                     print_missing "tar"
@@ -129,7 +128,7 @@ for x in "$@"; do
                     print_missing "pixz, unxz"
                 fi
             ;;
-            *.Z)
+            *.z)
                 if check "uncompress"; then
                     exe uncompress -f "$x"
                 else
