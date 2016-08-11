@@ -6,8 +6,14 @@
 VERSION="v1.1.0"
 
 function usage() {
-    echo "Usage: extract <archive> [<archive>...]"
     echo "Extracts bz2, exe, gz, lzma, rar, tar, tbz2, tgz, xz, z and zip archives"
+    echo ""
+    echo "Usage:"
+    echo "  extract [flags] <archive> [<archive>...]"
+    echo ""
+    echo "Flags:"
+    echo "  -h, --help      Show this help and exit"
+    echo "  -v, --version   Show the version and exit"
     exit 1;
 }
 
