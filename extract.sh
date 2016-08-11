@@ -3,6 +3,7 @@
 # Utility script to extract archives
 # https://github.com/gesquive/extract
 
+VERSION="v1.1.0"
 
 function usage() {
     echo "Usage: extract <archive> [<archive>...]"
@@ -14,8 +15,11 @@ if [ -z "$1" ]; then
     usage;
 fi
 
-if [ "$1" == "-h" ]; then
+if [ "$1" == "-h" ]||[ "$1" == "--help" ]; then
     usage;
+elif [ "$1" == "-v" ]||[ "$1" == "--version" ]; then
+    echo "extract ${VERSION}"
+    exit 1
 fi
 
 function check {
