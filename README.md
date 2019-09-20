@@ -4,12 +4,15 @@ Utility script to extract all sorts of archives
 
 ## Installing
 
-### Script Download
+### Online Download
 The easiest way to install is run in a terminal:
 ```shell
 > curl -sL https://git.io/JeOSF | bash
 ```
 Make sure the user has write permissions to `/usr/local/bin`.
+
+### Git Install
+After checking out the git repo, run `install.sh local`
 
 ### Manual Download
 You can download it directly from [github](https://raw.githubusercontent.com/gesquive/extract/master/extract.sh). or run `wget https://raw.githubusercontent.com/gesquive/extract/master/extract.sh`.
